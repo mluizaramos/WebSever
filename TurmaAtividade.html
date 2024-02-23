@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades da Turma</title>
+    <style>
+        /*login --------------------------------------*/
+        body{
+            margin: 0;
+            background-color: #92c7a3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            height: 100vh;
+            background-size: cover; 
+            background-position: center; 
+            padding: 50px; 
+            text-align: center;
+        }
+    
+        .box-login {
+            max-width: 400px;
+            max-height: 700px;
+            margin: 200px auto;
+            padding: 20px 10px 20px 10px;
+            border: 1px solid gray;
+            border-radius: 30px;
+            background-color: white;
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        .box-login h2 {
+            color: #3ca2a2;
+            margin-bottom: 30px;
+        }
+    
+        .box-login h2:hover {
+            color: #215a6d;
+        }
+        .box-login h3 {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 18px;
+            color: #92c7a3;
+        }
+    
+        .form {
+            margin-bottom: 25px;
+        }
+        .form label {
+            display: flex;
+            margin-left: 50px;
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+        .form input[type="text"],
+        .form input[type="email"],
+        .form input[type="password"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            
+        }
+    
+        .form button {
+            padding: 10px 50px;
+            border: none;
+            border-radius: 15px;
+            background-color: #3ca2a2;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+    
+        .form button:hover {
+            background-color:#215a6d;
+            
+        }
+    
+        .button-respostas{
+            padding: 10px 50px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(60, 131, 69);
+            color: #fff;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    
+<div class="container">
+    <div class="box-login">
+        <h2>Atividades da Turma</h2>
+        <div class="error-message" style="margin-bottom: 30px;">
+            <!-- Mensagem de erro sera inserida aqui-->
+        </div>
+        <form action="/confirmarAtividade" method="post">
+            <div class="form">
+                <label for="codigo">Turma</label>
+                <input type="text" id="turma" name="turma" placeholder="Codigo da Turma" required>
+            </div>
+            <div class="form">
+                <label for="descricao">Atividade</label>
+                <input type="text" id="atividade" name="atividade" placeholder="Codigo da Atividade" required>
+            </div>
+            <div class="form">
+                <button type="submit">Confirmar Atividade</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
